@@ -1,26 +1,25 @@
 {
   "type": "panel",
-  "name": "Three JS",
-  "id": "natel-threejs-panel",
+  "name": "Swagger",
+  "id": "natel-swagger-panel",
 
   "info": {
-    "description": "Three-js panel for grafana",
+    "description": "Swagger panel for grafana",
     "author": {
       "name": "Natel Energy"
     },
-    "keywords": [ "three", "scatter", "panel" ],
+    "keywords": [ "swagger", "panel" ],
     "logos": {
-      "small": "src/img/plotly_logo.svg",
-      "large": "src/img/plotly_logo.svg"
+      "small": "src/img/logo.svg",
+      "large": "src/img/logo.svg"
     },
     "links": [
-      {"name": "Plot.ly", "url": "https://plot.ly/javascript/"},
-      {"name": "Github", "url": "https://github.com/NatelEnergy/grafana-plotly-panel"},
-      {"name": "MIT License",  "url": "https://github.com/NatelEnergy/grafana-plotly-panel/blob/master/LICENSE"},
+      {"name": "Github", "url": "https://github.com/NatelEnergy/grafana-swagger-panel"},
+      {"name": "MIT License",  "url": "https://github.com/NatelEnergy/grafana-swagger-panel/blob/master/LICENSE"},
       {"name": "Natel Energy", "url": "http://www.natelenergy.com/"}
     ],
     "screenshots": [
-      { "name": "Scatter",     "path": "src/img/screenshot-scatter.png"  }
+      { "name": "Swagger",     "path": "src/img/screenshot-scatter.png"  }
     ],
     "version": "0.0.1",
     "updated": "2016-02-01"
