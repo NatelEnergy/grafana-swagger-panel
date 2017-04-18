@@ -10,8 +10,8 @@
     },
     "keywords": [ "swagger", "panel" ],
     "logos": {
-      "small": "src/img/logo.svg",
-      "large": "src/img/logo.svg"
+      "small": "src/img/swagger.svg",
+      "large": "src/img/swagger.svg"
     },
     "links": [
       {"name": "Github", "url": "https://github.com/NatelEnergy/grafana-swagger-panel"},
@@ -19,7 +19,7 @@
       {"name": "Natel Energy", "url": "http://www.natelenergy.com/"}
     ],
     "screenshots": [
-      { "name": "Swagger",     "path": "src/img/screenshot-scatter.png"  }
+      { "name": "Swagger", "path": "src/img/screenshot-scatter.png"  }
     ],
     "version": "0.0.1",
     "updated": "2016-02-01"

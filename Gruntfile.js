@@ -23,7 +23,7 @@ module.exports = (grunt) => {
       externals: {
         cwd: 'src',
         expand: true,
-        src: ['**/swagger/*'],
+        src: ['**/swagger/**'],
         dest: 'dist'
       },
       img_to_dist: {
