@@ -1,8 +1,10 @@
 module.exports = (grunt) => {
   require('load-grunt-tasks')(grunt);
+  var pkgJson = require('./package.json');
 
   grunt.loadNpmTasks('grunt-execute');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-string-replace');
 
   grunt.initConfig({
 
@@ -30,7 +32,27 @@ module.exports = (grunt) => {
         cwd: 'src',
         expand: true,
         src: ['img/**/*'],
-        dest: 'dist/src/'
+        dest: 'dist'
+      }
+    },
+
+    'string-replace': {
+      dist: {
+        files: [{
+          cwd: 'src',
+          expand: true,
+          src: ["**/plugin.json"],
+          dest: 'dist'
+        }],
+        options: {
+          replacements: [{
+            pattern: '%VERSION%',
+            replacement: pkgJson.version
+          },{
+            pattern: '%TODAY%',
+            replacement: '<%= grunt.template.today("yyyy-mm-dd") %>'
+          }]
+        }
       }
     },
 
@@ -61,5 +83,5 @@ module.exports = (grunt) => {
 
   });
 
-  grunt.registerTask('default', ['clean', 'copy:src_to_dist', 'copy:pluginDef', 'copy:img_to_dist', 'copy:externals', 'babel']);
+  grunt.registerTask('default', ['clean', 'copy:src_to_dist', 'copy:pluginDef', 'copy:img_to_dist', 'copy:externals', 'string-replace', 'babel']);
 };
